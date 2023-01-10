@@ -32,5 +32,8 @@ public interface PlatformConnectorPlugin {
     
     public PluginResponse getResponseFromRequest(PluginRequest request);
             
+    public String getPluginName();
+    
+    public String getPluginVersion();
     
 }
