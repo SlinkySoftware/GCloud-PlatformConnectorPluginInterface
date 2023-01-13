@@ -50,6 +50,12 @@
             <optional>true</optional>
             <version>1.18.24</version>
         </dependency>
+        <dependency>
+            <groupId>org.pf4j</groupId>
+            <artifactId>pf4j-spring</artifactId>
+            <version>0.8.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -126,32 +132,6 @@
                 </executions>  
             </plugin>
             <plugin>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>3.2.1</version>
-                <executions>
-                    <execution>
-                        <id>source-jar</id>
-                        <goals>
-                            <goal>jar-no-fork</goal>
-                        </goals>
-                        <phase>prepare-package</phase>
-                        <configuration>
-                            <outputDirectory>${project.build.outputDirectory}</outputDirectory>
-                            <finalName>${project.artifactId}-${project.version}.${git.branch.clean}.${git.commit.id.abbrev}</finalName>
-                            <attach>false</attach>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <phase>verify</phase>
-                    </execution>
-
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
                 <version>3.1.0</version>
@@ -164,7 +144,6 @@
                         <phase>install</phase>
                         <configuration>
                             <file>${project.build.directory}/${project.build.finalName}.${project.packaging}</file>
-                            <sources>${project.build.directory}/${project.build.finalName}-sources.${project.packaging}</sources>
                             <generatePom>true</generatePom>
                             <pomFile>pom.xml</pomFile>
                             <version>${project.version}</version>

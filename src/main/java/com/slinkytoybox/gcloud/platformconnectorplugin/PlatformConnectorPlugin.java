@@ -21,19 +21,26 @@ package com.slinkytoybox.gcloud.platformconnectorplugin;
 
 import com.slinkytoybox.gcloud.platformconnectorplugin.request.*;
 import com.slinkytoybox.gcloud.platformconnectorplugin.response.*;
+import org.pf4j.ExtensionPoint;
 
 /**
- *
+ * Platform Connector Plugin interface defining the functions to be implemented for each plugin
+ * 
  * @author Michael Junek (michael@juneks.com.au)
  */
-public interface PlatformConnectorPlugin {
+public interface PlatformConnectorPlugin extends ExtensionPoint {
     
     // This is the default interface required for implementing a plugin.
-    
-    public PluginResponse getResponseFromRequest(PluginRequest request);
+
+    /**
+     * getResponseFromRequest takes a PluginRequest abstract object, and returns
+     * a PluginResponse abstract object. The concrete implementation of this method
+     * should implement the various tasks for the extended classes of PluginRequest/Response
+     * 
+     * @param request The data for this request
+     * @return The response for the request
+     */
+     public PluginResponse getResponseFromRequest(PluginRequest request);
             
-    public String getPluginName();
-    
-    public String getPluginVersion();
-    
+   
 }
