@@ -19,6 +19,7 @@
  */
 package com.slinkytoybox.gcloud.platformconnectorplugin;
 
+import com.slinkytoybox.gcloud.platformconnectorplugin.health.HealthResult;
 import com.slinkytoybox.gcloud.platformconnectorplugin.request.*;
 import com.slinkytoybox.gcloud.platformconnectorplugin.response.*;
 import org.pf4j.ExtensionPoint;
@@ -42,5 +43,12 @@ public interface PlatformConnectorPlugin extends ExtensionPoint {
      */
      public PluginResponse getResponseFromRequest(PluginRequest request);
             
-   
+     /**
+      * getPluginHealth will enumerate the health of the plugin and return an
+      * object which contains statuses and metrics on the plugin. At minimum 
+      * this object should contain the overallStatus object.
+      * 
+      * @return HealthResult detailing the health of the plugin
+      */
+     public HealthResult getPluginHealth();
 }
