@@ -22,6 +22,7 @@ package com.slinkytoybox.gcloud.platformconnectorplugin.response;
 import java.util.Map;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
 /**
  *
@@ -29,6 +30,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper=true)
+@Accessors(chain=true)
 public class ReadResponse extends PluginResponse {
     
     private Map<String, Object> objectDetails;

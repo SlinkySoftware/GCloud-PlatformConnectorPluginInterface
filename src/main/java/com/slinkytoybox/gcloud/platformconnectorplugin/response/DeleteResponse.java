@@ -21,6 +21,7 @@ package com.slinkytoybox.gcloud.platformconnectorplugin.response;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 
 /**
  *
@@ -28,6 +29,7 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper=true)
+@Accessors(chain=true)
 public class DeleteResponse extends PluginResponse {
     
 }

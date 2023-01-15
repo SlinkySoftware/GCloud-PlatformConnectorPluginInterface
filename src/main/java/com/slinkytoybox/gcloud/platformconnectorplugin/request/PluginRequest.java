@@ -21,12 +21,14 @@ package com.slinkytoybox.gcloud.platformconnectorplugin.request;
 
 import java.time.OffsetDateTime;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  *
  * @author Michael Junek (michael@juneks.com.au)
  */
 @Data
+@Accessors(chain=true)
 public abstract class PluginRequest {
     
     String requestId;

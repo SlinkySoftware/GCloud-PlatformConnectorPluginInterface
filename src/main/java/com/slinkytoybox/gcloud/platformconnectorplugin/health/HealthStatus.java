@@ -19,14 +19,18 @@
  */
 package com.slinkytoybox.gcloud.platformconnectorplugin.health;
 
+import lombok.Data;
+import lombok.experimental.Accessors;
+
 /**
- * Enumeration for health of plugin and its components
+ *
  * @author Michael Junek (michael@juneks.com.au)
  */
-public enum HealthStatus {
+@Data
+@Accessors(chain = true)
+public class HealthStatus {
+
+    private HealthState healthState;
+    private String healthComment;
     
-    UNKNOWN,
-    HEALTHY,
-    WARNING,   
-    FAILED
 }

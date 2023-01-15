@@ -1,5 +1,5 @@
 /*
- *   platformconnectorplugin - ReadRequest.java
+ *   platformconnectorplugin - HealthState.java
  *
  *   Copyright (c) 2022-2023, Slinky Software
  *
@@ -17,22 +17,16 @@
  *   AGPL-3.0.md supplied with the source code.
  *
  */
-package com.slinkytoybox.gcloud.platformconnectorplugin.request;
-
-import java.util.Map;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
+package com.slinkytoybox.gcloud.platformconnectorplugin.health;
 
 /**
- *
+ * Enumeration for health of plugin and its components
  * @author Michael Junek (michael@juneks.com.au)
  */
-@Data
-@EqualsAndHashCode(callSuper=true)
-@Accessors(chain=true)
-public class ReadRequest extends PluginRequest {
-    private String objectId;
-    private Map<String, Object> searchParameters;
-
+public enum HealthState {
+    
+    UNKNOWN,
+    HEALTHY,
+    WARNING,   
+    FAILED
 }
