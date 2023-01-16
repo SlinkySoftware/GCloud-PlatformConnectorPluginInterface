@@ -21,6 +21,7 @@ package com.slinkytoybox.gcloud.platformconnectorplugin.request;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
@@ -30,6 +31,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper=true)
 @Accessors(chain=true)
+@ToString(callSuper=true)
 public class DeleteRequest extends PluginRequest {
     private String objectId;
 }

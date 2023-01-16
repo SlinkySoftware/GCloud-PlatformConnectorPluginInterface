@@ -1,5 +1,5 @@
 /*
- *   platformconnectorplugin - PluginResponse.java
+ *   platformconnectorplugin - PluginOperation.java
  *
  *   Copyright (c) 2022-2023, Slinky Software
  *
@@ -17,22 +17,16 @@
  *   AGPL-3.0.md supplied with the source code.
  *
  */
-package com.slinkytoybox.gcloud.platformconnectorplugin.response;
-
-import lombok.Data;
-import lombok.experimental.Accessors;
+package com.slinkytoybox.gcloud.platformconnectorplugin;
 
 /**
  *
  * @author Michael Junek (michael@juneks.com.au)
  */
-@Data
-@Accessors(chain = true)
-public abstract class PluginResponse {
-
-    private String requestId;
-    private String objectId;
-    private Boolean success;
-    private String errorMessage;
-
+public enum PluginOperation {
+    CREATE,
+    READ,
+    UPDATE,
+    DELETE
+    
 }

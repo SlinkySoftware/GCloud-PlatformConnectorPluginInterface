@@ -22,6 +22,7 @@ package com.slinkytoybox.gcloud.platformconnectorplugin;
 import com.slinkytoybox.gcloud.platformconnectorplugin.health.HealthResult;
 import com.slinkytoybox.gcloud.platformconnectorplugin.request.*;
 import com.slinkytoybox.gcloud.platformconnectorplugin.response.*;
+import java.util.List;
 import org.pf4j.ExtensionPoint;
 
 /**
@@ -51,4 +52,13 @@ public interface PlatformConnectorPlugin extends ExtensionPoint {
       * @return HealthResult detailing the health of the plugin
       */
      public HealthResult getPluginHealth();
+     
+     
+     /**
+      * getValidOperations will return the operations supported by the plugin
+      * If an operation is not supported, it should not be included in the list.
+      * 
+      * @return List of PluginOperations detailing what is supported
+      */
+     public List<PluginOperation> getValidOperations();
 }

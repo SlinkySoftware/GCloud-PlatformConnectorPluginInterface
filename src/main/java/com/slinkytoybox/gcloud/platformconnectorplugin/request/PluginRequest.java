@@ -31,7 +31,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain=true)
 public abstract class PluginRequest {
     
-    String requestId;
-    OffsetDateTime requestDate;
+    private String requestId;
+    private OffsetDateTime requestDate;
     
 }
