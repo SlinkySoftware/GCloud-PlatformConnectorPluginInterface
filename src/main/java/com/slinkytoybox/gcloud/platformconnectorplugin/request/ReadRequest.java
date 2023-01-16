@@ -19,6 +19,7 @@
  */
 package com.slinkytoybox.gcloud.platformconnectorplugin.request;
 
+import java.io.Serializable;
 import java.util.Map;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -35,6 +36,6 @@ import lombok.experimental.Accessors;
 @ToString(callSuper=true)
 public class ReadRequest extends PluginRequest {
     private String objectId;
-    private Map<String, Object> searchParameters;
+    private Map<String, Serializable> searchParameters;
 
 }

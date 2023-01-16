@@ -32,7 +32,7 @@ public abstract class PluginResponse {
 
     private String requestId;
     private String objectId;
-    private Boolean success;
+    private boolean success;
     private String errorMessage;
 
 }

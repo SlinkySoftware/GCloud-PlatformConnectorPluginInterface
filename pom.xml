@@ -6,8 +6,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     
-    <name>Genesys Cloud Platform Connector Plugin Abstract</name>
-    <description>Abstract Classes for creating extensible plugins to the Platform Connector Application</description>
+    <name>Genesys Cloud Platform Connector Plugin Interface</name>
+    <description>Abstract Classes and Interfaces for creating extensible plugins to the Platform Connector Web App</description>
     
     <url>https://github.com/SlinkySoftware/GCloud-PlatformConnectorPlugin</url>
     <issueManagement>
