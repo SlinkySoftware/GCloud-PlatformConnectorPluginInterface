@@ -32,7 +32,14 @@ public abstract class PluginResponse {
 
     private String requestId;
     private String objectId;
-    private boolean success;
+    private ResponseStatus status;
     private String errorMessage;
+
+    public static enum ResponseStatus {
+        SUCCESS,
+        RECORD_NOT_FOUND,
+        DUPLICATE,
+        FAILURE
+    }
 
 }
