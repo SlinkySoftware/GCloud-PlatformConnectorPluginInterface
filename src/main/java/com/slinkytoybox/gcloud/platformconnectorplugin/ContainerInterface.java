@@ -1,5 +1,5 @@
 /*
- *   platformconnectorplugin - PluginResponse.java
+ *   platformconnectorplugin - ContainerInterface.java
  *
  *   Copyright (c) 2022-2023, Slinky Software
  *
@@ -17,29 +17,24 @@
  *   AGPL-3.0.md supplied with the source code.
  *
  */
-package com.slinkytoybox.gcloud.platformconnectorplugin.response;
+package com.slinkytoybox.gcloud.platformconnectorplugin;
 
-import lombok.Data;
-import lombok.experimental.Accessors;
+import com.slinkytoybox.gcloud.platformconnectorplugin.health.HealthResult;
 
 /**
  *
  * @author Michael Junek (michael@juneks.com.au)
  */
-@Data
-@Accessors(chain = true)
-public abstract class PluginResponse {
+public interface ContainerInterface {
 
-    private String requestId;
-    private String objectId;
-    private ResponseStatus status;
-    private String errorMessage;
-
-    public enum ResponseStatus {
-        SUCCESS,
-        RECORD_NOT_FOUND,
-        DUPLICATE,
-        FAILURE
-    }
+    /**
+     * setPluginHealth allows the plugin to force a health update to the
+     * main container
+     *
+     * @param pluginId The plugin identifier
+     * @param healthResult The health update to be sent
+     *
+     */
+    public void setPluginHealth(String pluginId, HealthResult healthResult);
 
 }

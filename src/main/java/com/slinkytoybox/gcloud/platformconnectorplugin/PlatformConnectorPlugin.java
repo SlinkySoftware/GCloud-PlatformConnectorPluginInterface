@@ -61,4 +61,13 @@ public interface PlatformConnectorPlugin extends ExtensionPoint {
       * @return List of PluginOperations detailing what is supported
       */
      public List<PluginOperation> getValidOperations();
+     
+     /**
+      * Sets the container interface object for callbacks to the main application
+      * @param containerInterface 
+      */
+     
+     public void setContainerInterface(ContainerInterface containerInterface);
+
+
 }
