@@ -38,7 +38,7 @@ public abstract class PluginResponse {
     public enum ResponseStatus {
         SUCCESS,
         RECORD_NOT_FOUND,
-        DUPLICATE,
+        MULTIPLE_RECORDS,
         FAILURE
     }
 
