@@ -31,7 +31,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain=true)
 public class HealthMetric implements Serializable {
     private String metricName;
-    private Object metricValue;
+    private Serializable metricValue;
     
     
 }
