@@ -19,6 +19,7 @@
  */
 package com.slinkytoybox.gcloud.platformconnectorplugin.health;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 import lombok.Data;
@@ -29,9 +30,9 @@ import lombok.experimental.Accessors;
  * @author Michael Junek (michael@juneks.com.au)
  */
 @Data
-@Accessors(chain=true)
-public class HealthResult {
-    
+@Accessors(chain = true)
+public class HealthResult implements Serializable {
+
     private HealthStatus overallStatus;
     private Map<String, HealthStatus> componentStatus;
     private List<HealthMetric> metrics;

@@ -19,6 +19,7 @@
  */
 package com.slinkytoybox.gcloud.platformconnectorplugin.health;
 
+import java.io.Serializable;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -28,7 +29,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain=true)
-public class HealthMetric {
+public class HealthMetric implements Serializable {
     private String metricName;
     private Object metricValue;
     
