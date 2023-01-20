@@ -1,5 +1,5 @@
 /*
- *   platformconnectorplugin - HealthMetric.java
+ *   platformconnectorplugin - SourceContainer.java
  *
  *   Copyright (c) 2022-2023, Slinky Software
  *
@@ -17,21 +17,19 @@
  *   LGPL-3.0.md supplied with the source code.
  *
  */
-package com.slinkytoybox.gcloud.platformconnectorplugin.health;
+package com.slinkytoybox.gcloud.platformconnectorplugin;
 
-import java.io.Serializable;
 import lombok.Data;
-import lombok.experimental.Accessors;
 
 /**
  *
  * @author Michael Junek (michael@juneks.com.au)
  */
 @Data
-@Accessors(chain=true)
-public class HealthMetric implements Serializable {
-    private String metricName;
-    private Serializable metricValue;
+public class SourceContainer {
     
+    private boolean usesAGPL = true;
+    private String sourceFileName;
+    private byte[] sourceJar;
     
 }
