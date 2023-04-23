@@ -20,6 +20,7 @@
 package com.slinkytoybox.gcloud.platformconnectorplugin.request;
 
 import java.time.OffsetDateTime;
+import java.util.Map;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -33,5 +34,6 @@ public abstract class PluginRequest {
     
     private String requestId;
     private OffsetDateTime requestDate;
+    private Map<String, String[]> requestParameters;
     
 }
