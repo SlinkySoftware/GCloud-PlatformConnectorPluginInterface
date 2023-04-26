@@ -36,5 +36,21 @@ public interface ContainerInterface {
      *
      */
     public void setPluginHealth(String pluginId, HealthResult healthResult);
+    
+    /**
+     * encrypt will use the container interface classes to perform encryption
+     * using the standard methodology and keys used by the application
+     * @param plainText The plain text to be encrypted
+     * @return String with the encrypted text, or NULL if encryption fails
+     */
+    public String encrypt (String plainText);
+    
+    /**
+     * decrypt will use the container interface classes to perform decryption
+     * using the standard methodology and keys used by the application
+     * @param encryptedText The encrypted string to be decrypted
+     * @return String with the decrypted text, or NULL if decryption fails
+     */
+    public String decrypt (String encryptedText);
 
 }
